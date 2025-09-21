@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    text-align: center;
+    width: 100%;
+    padding: 1.2rem;
+}
+
+h1{
+    color: black;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.board{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.list{
+    background-color: aliceblue;
+    padding: 1 rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    color: 555;
+    margin: 1rem;
+    font-size: 1.5rem;
+}
+
+.card{
+    background-color: white;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    margin-left: 50px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    cursor: grab;
+    transition: background-color 0.3s ease;
+}
+
+.card:active{
+    cursor: grabbing;
+}
+
+.list.over{
+    background-color: rgba(87, 185, 218, 0.538);
+}
+
+.card.dragging{
+    opacity: 0.5;
+}   
+
+button{
+    background-color: rgb(87, 185, 218);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: rgb(0, 123, 255);
+}
+
+@media (max-width: 768px){
+    .board{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list{
+        max-width: 90%;
+        margin-bottom: 20px;
+    }
+}
